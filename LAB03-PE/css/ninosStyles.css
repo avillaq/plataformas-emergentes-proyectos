@@ -357,3 +357,94 @@
 .btnVerSolucionVolver:hover {
     background-color: var(--primary-hover);
 }
+
+/* ==========================================================================
+   Responsive Adaptations (Niños)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .containerTest {
+        gap: 1.25rem;
+    }
+
+    .plate-stage {
+        max-width: 280px;
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .randomImage {
+        max-width: 260px;
+    }
+
+    .drop-area {
+        max-width: 100%;
+        min-height: 80px;
+        font-size: 0.88rem;
+        padding: 0.75rem;
+    }
+
+    .kids-actions {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .btn-nosee-kids {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+    }
+
+    .btn-siguiente, .btnVerSolucionVolver {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .plate-stage {
+        max-width: 240px;
+        padding: 0.5rem;
+    }
+
+    .randomImage {
+        max-width: 220px;
+    }
+
+    .numberCards {
+        gap: 0.5rem;
+    }
+
+    .card {
+        width: 72px;
+        height: 84px;
+        font-size: 1.8rem;
+        border-radius: var(--radius-sm);
+    }
+
+    .radio-inputs {
+        gap: 0.5rem;
+        margin: 1rem 0;
+    }
+
+    .radio-tile {
+        width: 62px;
+        height: 62px;
+        padding: 4px;
+        border-radius: var(--radius-sm);
+    }
+
+    .radio-icon img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .containerGroupCheckBox {
+        padding: 1rem 0.85rem;
+    }
+
+    .solucion {
+        padding: 1rem;
+    }
+}

@@ -67,6 +67,28 @@ function initVoiceAssistant() {
         const waves = document.querySelectorAll('.voice-wave-bar');
         waves.forEach(w => w.classList.remove('active'));
     });
+
+    // Soporte táctil para menús desplegables en dispositivos móviles
+    document.querySelectorAll('.dropdown').forEach(dd => {
+        const trigger = dd.querySelector(':scope > a');
+        if (trigger) {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const isOpen = dd.classList.contains('open');
+                document.querySelectorAll('.dropdown.open').forEach(d => d.classList.remove('open'));
+                if (!isOpen) {
+                    dd.classList.add('open');
+                }
+            });
+        }
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.dropdown')) {
+            document.querySelectorAll('.dropdown.open').forEach(dd => dd.classList.remove('open'));
+        }
+    });
 }
 
 function setAssistantUI(isOn) {

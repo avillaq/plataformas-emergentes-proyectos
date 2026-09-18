@@ -348,3 +348,126 @@
     height: auto;
     display: block;
 }
+
+/* ==========================================================================
+   Responsive Adaptations (Adultos)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    #imageContainer {
+        max-width: 280px;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .container-Verificar-Borrar {
+        max-width: 320px;
+        width: 100%;
+    }
+
+    #checkButton {
+        padding: 0.7rem 1rem;
+    }
+
+    #clearButton {
+        padding: 0.7rem 0.85rem;
+    }
+
+    #keyboard {
+        max-width: 320px;
+        gap: 0.4rem;
+    }
+
+    #keyboard button.keyboardKey {
+        height: 46px;
+        font-size: 1.15rem;
+    }
+
+    #noSeeButton {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .enjoy-css {
+        padding: 1.15rem 0.85rem;
+        gap: 1.15rem;
+    }
+
+    .containerColors {
+        gap: 6px;
+        padding: 0.4rem;
+    }
+
+    .elem1 {
+        width: 38px;
+        height: 38px;
+    }
+
+    .d15-actions-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        width: 100%;
+    }
+
+    .btnVerResultados, .btn-reset-d15 {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+    }
+
+    .canvas-container {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #imageContainer {
+        max-width: 240px;
+    }
+
+    #userNumbers {
+        gap: 0.5rem;
+    }
+
+    #userNumbers div, .digit-slot {
+        width: 50px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+
+    #keyboard {
+        gap: 0.35rem;
+    }
+
+    #keyboard button.keyboardKey {
+        height: 42px;
+        font-size: 1rem;
+    }
+
+    .enjoy-css {
+        padding: 0.85rem 0.5rem;
+    }
+
+    .d15-section-title {
+        font-size: 0.8rem;
+    }
+
+    .containerColors {
+        gap: 4px;
+        padding: 0.35rem;
+    }
+
+    .elem1 {
+        width: 32px;
+        height: 32px;
+    }
+
+    #elem1::after, #elem17::after {
+        font-size: 10px;
+    }
+
+    .canvas-container {
+        padding: 0.75rem;
+    }
+}
