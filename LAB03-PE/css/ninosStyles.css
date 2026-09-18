@@ -1,0 +1,359 @@
+/* ==========================================================================
+   Chromatix — Estilos Minimalistas Tests de Niños
+   ========================================================================== */
+
+.containerTest {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   Lámina Central Neutra D65
+   ========================================================================== */
+
+.plate-stage {
+    background: #FFFFFF;
+    padding: 1rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-card);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.randomImage {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+/* ==========================================================================
+   Test 1: Tarjetas Numéricas y Dropzone
+   ========================================================================== */
+
+.cards-and-drop-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.numberCards {
+    display: flex;
+    gap: 1.25rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0.5rem 0;
+}
+
+.card {
+    width: 88px;
+    height: 100px;
+    background-color: #FFFFFF;
+    border: 2px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--primary-clinical);
+    cursor: grab;
+    user-select: none;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.card:hover {
+    transform: translateY(-4px) scale(1.05);
+    border-color: var(--primary-clinical);
+    box-shadow: 0 8px 16px rgba(30, 58, 138, 0.12);
+}
+
+.card:active {
+    cursor: grabbing;
+    transform: scale(0.98);
+}
+
+.drop-area {
+    width: 100%;
+    max-width: 380px;
+    min-height: 90px;
+    border: 2px dashed var(--border-focus);
+    border-radius: var(--radius-md);
+    background-color: var(--bg-d65);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    transition: all 0.25s ease;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.drop-area:hover {
+    border-color: var(--primary-clinical);
+    background-color: var(--primary-light);
+    color: var(--primary-clinical);
+}
+
+.drop-area.dragover {
+    border-color: var(--status-active);
+    background-color: var(--status-active-bg);
+    color: var(--status-active);
+    border-style: solid;
+    transform: scale(1.02);
+}
+
+.kids-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.25rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn-nosee-kids {
+    background: transparent;
+    border: 1px solid var(--border-subtle);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.65rem 1.4rem;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-nosee-kids:hover {
+    background-color: #F1F5F9;
+    color: var(--text-main);
+    border-color: var(--border-focus);
+}
+
+/* ==========================================================================
+   Test 2: Radio Tiles con Iconos de Animales
+   ========================================================================== */
+
+.radio-inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1.25rem 0 1.75rem;
+}
+
+.radio-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.radio-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 96px;
+    height: 96px;
+    border-radius: var(--radius-md);
+    border: 2px solid var(--border-subtle);
+    background-color: #FFFFFF;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.radio-tile:hover {
+    border-color: var(--primary-clinical);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.1);
+}
+
+.radio-icon img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    border-radius: var(--radius-sm);
+}
+
+.radio-input:checked+.radio-tile {
+    border-color: var(--primary-clinical);
+    background-color: var(--primary-light);
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.2);
+    transform: scale(1.04);
+}
+
+.btn-siguiente {
+    background-color: var(--primary-clinical);
+    color: #FFFFFF;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: var(--radius-md);
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-siguiente:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   Test 3: Selección de Animales en Escena (Checkboxes)
+   ========================================================================== */
+
+.containerGroupCheckBox {
+    width: 100%;
+    max-width: 440px;
+    background: #FFFFFF;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.containerGroupCheckBox>p {
+    font-weight: 700;
+    color: var(--text-main);
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-subtle);
+    padding-bottom: 0.4rem;
+}
+
+.containerCheckBox {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.4rem 0.6rem;
+    border-radius: var(--radius-sm);
+    transition: background-color 0.15s ease;
+    cursor: pointer;
+}
+
+.containerCheckBox:hover {
+    background-color: var(--bg-d65);
+}
+
+.containerCheckBox label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-main);
+    cursor: pointer;
+    flex: 1;
+}
+
+/* Checkbox Moderno */
+.ui-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--border-focus);
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.ui-checkbox:hover {
+    border-color: var(--primary-clinical);
+}
+
+.ui-checkbox:checked {
+    background-color: var(--primary-clinical);
+    border-color: var(--primary-clinical);
+}
+
+.ui-checkbox:checked::after {
+    content: '';
+    width: 6px;
+    height: 11px;
+    border: solid #FFFFFF;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    margin-top: -2px;
+}
+
+/* Panel de Solución */
+.solucion {
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--primary-light);
+    border-left: 4px solid var(--primary-clinical);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    text-align: left;
+}
+
+.solucion h2 {
+    font-size: 1.25rem;
+    color: var(--primary-clinical);
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.solucion p {
+    font-size: 0.94rem;
+    color: var(--text-main);
+    margin-bottom: 0.75rem;
+}
+
+.btnVerSolucionVolver {
+    background-color: var(--primary-clinical);
+    color: #FFFFFF;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: var(--radius-md);
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btnVerSolucionVolver:hover {
+    background-color: var(--primary-hover);
+}

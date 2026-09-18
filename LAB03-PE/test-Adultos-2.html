@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test 2 para Adultos — Farnsworth D-15 | Chromatix</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/adultosStyles.css">
+    <link rel="icon" href="img/icon.jpg" type="image/jpeg">
+</head>
+
+<body>
+
+    <header>
+        <div class="side-header">
+            <div class="brand-group">
+                <div class="logo-badge">C</div>
+                <a href="index.html" class="logo-title">Chromatix</a>
+                <span class="logo-tag">Adultos • Test 2</span>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <div class="dropdown">
+                    <a>Niños <span class="dropdown-arrow">▼</span></a>
+                    <div class="content">
+                        <a href="test-ninos-1.html">Test 1 — Números</a>
+                        <a href="test-ninos-2.html">Test 2 — Animales</a>
+                        <a href="test-ninos-3.html">Test 3 — Escena Oculta</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a>Adultos <span class="dropdown-arrow">▼</span></a>
+                    <div class="content">
+                        <a href="test-Adultos-1.html">Test 1 — Ishihara</a>
+                        <a href="test-Adultos-2.html">Test 2 — Farnsworth D-15</a>
+                    </div>
+                </div>
+                <div class="assistant-btn-wrapper">
+                    <button class="assistant-btn" id="assistantBtnTrigger" title="Activar / Desactivar Asistente de Voz">
+                        <img src="img/robotOff.png" class="onOffAssistant" id="onOffAssistant" state="off" alt="Asistente de Voz">
+                    </button>
+                    <button type="button" class="assistant-help-btn" onclick="window.openVoiceModal()" title="Ver comandos de voz">
+                        Comandos 🤖
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <h1>Test 2 para Adultos: Farnsworth D-15</h1>
+            <p>
+                El test Farnsworth D-15 evalúa la habilidad para ordenar 15 pastillas coloreadas según la continuidad del matiz perceptual. Permite diferenciar entre protanopia, deuteranopia y tritanopia mediante el trazado de ejes de confusión en el diagrama polar CIE.
+            </p>
+
+            <div class="instructions-box">
+                <h3>Instrucciones de Ordenamiento:</h3>
+                <ol>
+                    <li>La primera pastilla con estrella (★) en la bandeja inferior es la <strong>pastilla piloto fija</strong>.</li>
+                    <li>Selecciona con un clic una pastilla de color de la bandeja superior o inferior y haz clic en la casilla de destino para colocarla o intercambiarla.</li>
+                    <li>Ordena la secuencia según la transición más cercana del color hasta completar los 15 espacios.</li>
+                    <li>Al terminar, pulsa <strong>"Evaluar y Ver Resultados"</strong> para trazar tu diagrama polar.</li>
+                </ol>
+            </div>
+
+            <div class="voice-hint-badge">
+                <span>🤖 Modo con voz: puedes decir «Ver resultados», «Evaluar» o «Reiniciar»</span>
+            </div>
+
+            <div class="containerTest">
+                <div class="enjoy-css">
+                    <div>
+                        <div class="d15-section-title">Pastillas por ordenar (Bandeja superior):</div>
+                        <div class="containerColors" id="containerUnordered">
+                            <div id="elem1" class="elem1" style="background:lightgray;"></div>
+                            <div id="elem2" class="elem1" data="colorBox" value="2" style="background:rgb(108,129,100);" title="Pastilla 2"></div>
+                            <div id="elem3" class="elem1" data="colorBox" value="3" style="background:rgb(59,134,144);" title="Pastilla 3"></div>
+                            <div id="elem4" class="elem1" data="colorBox" value="4" style="background:rgb(143,111,164);" title="Pastilla 4"></div>
+                            <div id="elem5" class="elem1" data="colorBox" value="5" style="background:rgb(144,118,96);" title="Pastilla 5"></div>
+                            <div id="elem6" class="elem1" data="colorBox" value="6" style="background:rgb(88,132,115);" title="Pastilla 6"></div>
+                            <div id="elem7" class="elem1" data="colorBox" value="7" style="background:rgb(156,109,137);" title="Pastilla 7"></div>
+                            <div id="elem8" class="elem1" data="colorBox" value="8" style="background:rgb(57,133,156);" title="Pastilla 8"></div>
+                            <div id="elem9" class="elem1" data="colorBox" value="9" style="background:rgb(159,109,124);" title="Pastilla 9"></div>
+                            <div id="elem10" class="elem1" data="colorBox" value="10" style="background:rgb(128,115,178);" title="Pastilla 10"></div>
+                            <div id="elem11" class="elem1" data="colorBox" value="11" style="background:rgb(59,132,167);" title="Pastilla 11"></div>
+                            <div id="elem12" class="elem1" data="colorBox" value="12" style="background:rgb(146,112,153);" title="Pastilla 12"></div>
+                            <div id="elem13" class="elem1" data="colorBox" value="13" style="background:rgb(131,123,93);" title="Pastilla 13"></div>
+                            <div id="elem14" class="elem1" data="colorBox" value="14" style="background:rgb(53,131,180);" title="Pastilla 14"></div>
+                            <div id="elem15" class="elem1" data="colorBox" value="15" style="background:rgb(63,135,130);" title="Pastilla 15"></div>
+                            <div id="elem16" class="elem1" data="colorBox" value="16" style="background:rgb(158,110,111);" title="Pastilla 16"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="d15-section-title">Bandeja de Ordenamiento Secuencial (Pastilla Piloto + 15 Posiciones):</div>
+                        <div class="containerColors" id="containerOrdered">
+                            <div id="elem17" class="elem1" style="background:rgb(55,129,193);" title="Pastilla Piloto Fija"></div>
+                            <div id="elem18" class="elem1" data="colorBox" value="18" style="background:white" title="Posición 1"></div>
+                            <div id="elem19" class="elem1" data="colorBox" value="19" style="background:white;" title="Posición 2"></div>
+                            <div id="elem20" class="elem1" data="colorBox" value="20" style="background:white;" title="Posición 3"></div>
+                            <div id="elem21" class="elem1" data="colorBox" value="21" style="background:white;" title="Posición 4"></div>
+                            <div id="elem22" class="elem1" data="colorBox" value="22" style="background:white;" title="Posición 5"></div>
+                            <div id="elem23" class="elem1" data="colorBox" value="23" style="background:white;" title="Posición 6"></div>
+                            <div id="elem24" class="elem1" data="colorBox" value="24" style="background:white;" title="Posición 7"></div>
+                            <div id="elem25" class="elem1" data="colorBox" value="25" style="background:white;" title="Posición 8"></div>
+                            <div id="elem26" class="elem1" data="colorBox" value="26" style="background:white;" title="Posición 9"></div>
+                            <div id="elem27" class="elem1" data="colorBox" value="27" style="background:white;" title="Posición 10"></div>
+                            <div id="elem28" class="elem1" data="colorBox" value="28" style="background:white;" title="Posición 11"></div>
+                            <div id="elem29" class="elem1" data="colorBox" value="29" style="background:white;" title="Posición 12"></div>
+                            <div id="elem30" class="elem1" data="colorBox" value="30" style="background:white;" title="Posición 13"></div>
+                            <div id="elem31" class="elem1" data="colorBox" value="31" style="background:white;" title="Posición 14"></div>
+                            <div id="elem32" class="elem1" data="colorBox" value="32" style="background:white;" title="Posición 15"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d15-actions-bar">
+                    <button type="button" class="btnVerResultados" id="btnVerResultados">Evaluar y Ver Resultados</button>
+                    <button type="button" class="btn-reset-d15" id="btnResetD15">Reiniciar Bandeja</button>
+                </div>
+
+                <div id="d15DiagnosisOutput" style="display: none; width: 100%;"></div>
+
+                <div class="canvas-container">
+                    <h3 style="margin-bottom: 1rem; color: var(--text-main); font-size: 1.1rem;">Diagrama Polar de Trayectoria Farnsworth D-15</h3>
+                    <img id="img-D15" width="634" height="603" class="imgCanvas" src="imagenes/test-adultos-2/img-D15.png" alt="Diagrama Polar CIE D15" style="display: none;">
+                    <canvas id="myCanvas" width="634" height="603"></canvas>
+                </div>
+
+                <div class="d15-evaluation-guide">
+                    <img src="imagenes/test-adultos-2/D15-evaluation.jpg" alt="Guía clínica de interpretación Farnsworth D-15">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2026 Chromatix — Plataforma de Evaluación Visual clínica.</p>
+            <p>Test cuantitativo Farnsworth D-15 • Entorno D65</p>
+        </div>
+    </footer>
+
+    <script type="module" src="js/adultosScript-2.js"></script>
+    <script type="module" src="js/voiceAssistant.js"></script>
+</body>
+
+</html>

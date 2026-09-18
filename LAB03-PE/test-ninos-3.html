@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test 3 para Niños — Escena Oculta | Chromatix</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/ninosStyles.css">
+    <link rel="icon" href="img/icon.jpg" type="image/jpeg">
+</head>
+
+<body>
+
+    <header>
+        <div class="side-header">
+            <div class="brand-group">
+                <div class="logo-badge">C</div>
+                <a href="index.html" class="logo-title">Chromatix</a>
+                <span class="logo-tag">Niños • Test 3</span>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <div class="dropdown">
+                    <a>Niños <span class="dropdown-arrow">▼</span></a>
+                    <div class="content">
+                        <a href="test-ninos-1.html">Test 1 — Números</a>
+                        <a href="test-ninos-2.html">Test 2 — Animales</a>
+                        <a href="test-ninos-3.html">Test 3 — Escena Oculta</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a>Adultos <span class="dropdown-arrow">▼</span></a>
+                    <div class="content">
+                        <a href="test-Adultos-1.html">Test 1 — Ishihara</a>
+                        <a href="test-Adultos-2.html">Test 2 — Farnsworth D-15</a>
+                    </div>
+                </div>
+                <div class="assistant-btn-wrapper">
+                    <button class="assistant-btn" id="assistantBtnTrigger"
+                        title="Activar / Desactivar Asistente de Voz">
+                        <img src="img/robotOff.png" class="onOffAssistant" id="onOffAssistant" state="off"
+                            alt="Asistente de Voz">
+                    </button>
+                    <button type="button" class="assistant-help-btn" onclick="window.openVoiceModal()"
+                        title="Ver comandos de voz">
+                        Comandos 🤖
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <h1>Test 3 para niños: Rastreo de Escena Oculta</h1>
+            <p>
+                Hay animales camuflados en el paisaje entre manchas de colores. Tu objetivo es encontrar todos los
+                animales que puedas y marcar sus casillas.
+            </p>
+
+            <div class="voice-hint-badge">
+                <span>🤖 Modo con voz: di en voz alta «Selecciona el conejo», «Selecciona el oso», «Ver solución»</span>
+            </div>
+
+            <div class="containerTest">
+                <div class="container" id="container">
+                    <div class="plate-stage" style="max-width: 580px; padding: 0.5rem;">
+                        <img src="imagenes/test-ninos-3/colour-blind-animal-test.jpg" id="randomImage"
+                            class="randomImage" style="max-width: 100%; border-radius: var(--radius-md);"
+                            alt="Escena de animales escondidos" draggable="false">
+                    </div>
+
+                    <div class="containerGroupCheckBox" id="containerGroupCheckBox">
+                        <p>¿Qué animales logras ver en la imagen?</p>
+                        <div class="containerCheckBox">
+                            <input type="checkbox" id="conejo" value="conejo" class="ui-checkbox">
+                            <label for="conejo">Conejo</label>
+                        </div>
+                        <div class="containerCheckBox">
+                            <input type="checkbox" id="oso" value="oso" class="ui-checkbox">
+                            <label for="oso">Oso</label>
+                        </div>
+                        <div class="containerCheckBox">
+                            <input type="checkbox" id="ardilla" value="ardilla" class="ui-checkbox">
+                            <label for="ardilla">Ardilla</label>
+                        </div>
+                        <div class="containerCheckBox">
+                            <input type="checkbox" id="vaca" value="vaca" class="ui-checkbox">
+                            <label for="vaca">Vaca</label>
+                        </div>
+                        <div class="containerCheckBox">
+                            <input type="checkbox" id="zorro" value="zorro" class="ui-checkbox">
+                            <label for="zorro">Zorro</label>
+                        </div>
+                        <div class="containerCheckBox">
+                            <input type="checkbox" id="venado" value="venado" class="ui-checkbox">
+                            <label for="venado">Venado</label>
+                        </div>
+                    </div>
+
+                    <div class="solucion" id="solucion" style="display: none;">
+                        <h2>Solución de la Escena Oculta</h2>
+                        <p><strong>Ubicaciones principales:</strong></p>
+                        <p>• <strong>Oso:</strong> Arriba a la izquierda.</p>
+                        <p>• <strong>Vaca y Venado:</strong> Arriba a la derecha.</p>
+                        <p>• <strong>Ardilla:</strong> Abajo a la derecha.</p>
+                        <p>• <strong>Conejo:</strong> Abajo en el medio.</p>
+                        <p>• <strong>Zorro:</strong> A la izquierda, un poco más abajo del medio.</p>
+                    </div>
+
+                    <div style="margin-top: 1rem;">
+                        <button type="button" class="btn btnVerSolucionVolver" id="btnVerSolucionVolver">Ver
+                            solución</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2026 Chromatix — Plataforma de Evaluación Visual infantil.</p>
+            <p>D65 neutro</p>
+        </div>
+    </footer>
+
+    <script type="module" src="js/ninosScript-3.js"></script>
+    <script type="module" src="js/voiceAssistant.js"></script>
+</body>
+
+</html>

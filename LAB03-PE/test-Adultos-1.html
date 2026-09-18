@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test 1 para Adultos — Ishihara | Chromatix</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/adultosStyles.css">
+    <link rel="icon" href="img/icon.jpg" type="image/jpeg">
+</head>
+
+<body>
+
+    <header>
+        <div class="side-header">
+            <div class="brand-group">
+                <div class="logo-badge">C</div>
+                <a href="index.html" class="logo-title">Chromatix</a>
+                <span class="logo-tag">Adultos • Test 1</span>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <div class="dropdown">
+                    <a>Niños <span class="dropdown-arrow">▼</span></a>
+                    <div class="content">
+                        <a href="test-ninos-1.html">Test 1 — Números</a>
+                        <a href="test-ninos-2.html">Test 2 — Animales</a>
+                        <a href="test-ninos-3.html">Test 3 — Escena Oculta</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a>Adultos <span class="dropdown-arrow">▼</span></a>
+                    <div class="content">
+                        <a href="test-Adultos-1.html">Test 1 — Ishihara</a>
+                        <a href="test-Adultos-2.html">Test 2 — Farnsworth D-15</a>
+                    </div>
+                </div>
+                <div class="assistant-btn-wrapper">
+                    <button class="assistant-btn" id="assistantBtnTrigger" title="Activar / Desactivar Asistente de Voz">
+                        <img src="img/robotOff.png" class="onOffAssistant" id="onOffAssistant" state="off" alt="Asistente de Voz">
+                    </button>
+                    <button type="button" class="assistant-help-btn" onclick="window.openVoiceModal()" title="Ver comandos de voz">
+                        Comandos 🤖
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <h1>Test 1 para Adultos: Placas de Ishihara</h1>
+            <p>
+                El Test de Ishihara es el estándar oftalmológico mundial para diagnosticar deficiencias visuales en el eje rojo-verde (Protanopia / Deuteranopia). Observa la lámina e introduce los dígitos que logres distinguir.
+            </p>
+
+            <div class="voice-hint-badge">
+                <span>🤖 Entrada múltiple: pulsa el teclado táctil, usa las teclas 0-9 y Enter de tu teclado físico o di en voz alta: «Escribe setenta y cuatro»</span>
+            </div>
+
+            <div class="containerTest">
+                <div id="gameContainer">
+                    <div id="imageContainer">
+                        <img src="" alt="Lámina de Ishihara" id="randomImage">
+                    </div>
+
+                    <div id="userNumbers"></div>
+
+                    <div class="container-Verificar-Borrar">
+                        <button type="button" id="checkButton">Siguiente</button>
+                        <button type="button" id="clearButton">Borrar</button>
+                    </div>
+
+                    <div id="keyboard">
+                        <button type="button" value="uno" class="keyboardKey">1</button>
+                        <button type="button" value="dos" class="keyboardKey">2</button>
+                        <button type="button" value="tres" class="keyboardKey">3</button>
+                        <button type="button" value="cuatro" class="keyboardKey">4</button>
+                        <button type="button" value="cinco" class="keyboardKey">5</button>
+                        <button type="button" value="seis" class="keyboardKey">6</button>
+                        <button type="button" value="siete" class="keyboardKey">7</button>
+                        <button type="button" value="ocho" class="keyboardKey">8</button>
+                        <button type="button" value="nueve" class="keyboardKey">9</button>
+                        <button type="button" value="cero" class="keyboardKey">0</button>
+                    </div>
+
+                    <button type="button" id="noSeeButton">No veo ningún número</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2026 Chromatix — Plataforma de Evaluación Visual clínica.</p>
+            <p>Entorno óptico D65</p>
+        </div>
+    </footer>
+
+    <script type="module" src="js/adultosScript-1.js"></script>
+    <script type="module" src="js/voiceAssistant.js"></script>
+</body>
+
+</html>

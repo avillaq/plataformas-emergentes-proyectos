@@ -1,13 +1,144 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>test-daltonismo</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chromatix — Tests de Daltonismo para Niños y Adultos</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="img/icon.jpg" type="image/jpeg">
+</head>
+
+<body>
+
+    <header>
+        <div class="side-header">
+            <div class="brand-group">
+                <div class="logo-badge">C</div>
+                <a href="index.html" class="logo-title">Chromatix</a>
+                <span class="logo-tag">D65 Clínico</span>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <div class="dropdown">
+                    <a>Niños <span class="dropdown-arrow">▼</span></a>
+                    <div class="content">
+                        <a href="test-ninos-1.html">Test 1 — Números</a>
+                        <a href="test-ninos-2.html">Test 2 — Animales</a>
+                        <a href="test-ninos-3.html">Test 3 — Escena Oculta</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a>Adultos <span class="dropdown-arrow">▼</span></a>
+                    <div class="content">
+                        <a href="test-Adultos-1.html">Test 1 — Ishihara</a>
+                        <a href="test-Adultos-2.html">Test 2 — Farnsworth D-15</a>
+                    </div>
+                </div>
+                <div class="assistant-btn-wrapper">
+                    <button class="assistant-btn" id="assistantBtnTrigger" title="Activar / Desactivar Asistente de Voz">
+                        <img src="img/robotOff.png" class="onOffAssistant" id="onOffAssistant" state="off" alt="Asistente de Voz">
+                    </button>
+                    <button type="button" class="assistant-help-btn" onclick="window.openVoiceModal()" title="Ver comandos de voz">
+                        Comandos 🤖
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <section class="portal-hero">
+                <h1>Evaluación de la Visión del Color</h1>
+                <p>Plataforma clínica estandarizada con pruebas ópticas para niños y adultos bajo entorno neutro D65, con acompañamiento interactivo por comandos de voz.</p>
+            </section>
+
+            <section class="portal-grid">
+                <!-- Tarjeta Módulo Infantil -->
+                <div class="portal-card card-ninos">
+                    <div class="portal-card-header">
+                        <h2 class="portal-card-title">Módulo Infantil</h2>
+                    </div>
+                    <p class="portal-card-desc">
+                        Dinámicas lúdicas de emparejamiento, reconocimiento de números grandes y animales escondidos para evaluar la visión de los más pequeños sin estrés.
+                    </p>
+                    <div class="portal-card-badges">
+                        <span class="portal-badge">3 a 12 años</span>
+                        <span class="portal-badge">3 Pruebas</span>
+                        <span class="portal-badge">Arrastrar & Soltar</span>
+                        <span class="portal-badge">Voz guiada</span>
+                    </div>
+                    <div class="portal-tests-list">
+                        <a href="test-ninos-1.html" class="portal-test-link">
+                            <span>Test 1: Reconocimiento de Números</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                        <a href="test-ninos-2.html" class="portal-test-link">
+                            <span>Test 2: Identificación de Animales</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                        <a href="test-ninos-3.html" class="portal-test-link">
+                            <span>Test 3: Rastreo de Escena Oculta</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Módulo Adultos -->
+                <div class="portal-card card-adultos">
+                    <div class="portal-card-header">
+                        <h2 class="portal-card-title">Módulo Clínico (Adultos)</h2>
+                    </div>
+                    <p class="portal-card-desc">
+                        Protocolos oftalmológicos estandarizados para identificar anomalías cromáticas (rojo-verde y azul-amarillo) mediante Ishihara y Farnsworth D-15.
+                    </p>
+                    <div class="portal-card-badges">
+                        <span class="portal-badge">Adolescentes y Adultos</span>
+                        <span class="portal-badge">2 Pruebas</span>
+                        <span class="portal-badge">Ishihara</span>
+                        <span class="portal-badge">Farnsworth D-15</span>
+                    </div>
+                    <div class="portal-tests-list">
+                        <a href="test-Adultos-1.html" class="portal-test-link">
+                            <span>Test 1: Placas de Ishihara</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                        <a href="test-Adultos-2.html" class="portal-test-link">
+                            <span>Test 2: Ordenamiento Farnsworth D-15</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="portal-info-section">
+                <div class="portal-info-content">
+                    <div>
+                        <h2>¿Qué es el daltonismo?</h2>
+                        <p>
+                            El daltonismo (o deficiencia de la visión cromática) es una condición visual hereditaria o adquirida que afecta la capacidad para distinguir ciertos matices de color. La forma más frecuente es la deficiencia rojo-verde (protanopia y deuteranopia).
+                        </p>
+                        <p>
+                            Nuestras pruebas ofrecen una orientación visual rápida y educativa. Puedes realizar los tests con el mouse, el teclado táctil o dictar tus respuestas por voz con el asistente integrado.
+                        </p>
+                    </div>
+                    <div>
+                        <img class="img-dalt" src="img/Daltonismo.jpg" alt="Ilustración comparativa de daltonismo" draggable="false">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2026 Chromatix - Plataforma de Evaluación Visual</p>
+            <p>Diseño Clínico Estandarizado D65</p>
+        </div>
+    </footer>
+
+    <script type="module" src="js/voiceAssistant.js"></script>
+</body>
+
 </html>

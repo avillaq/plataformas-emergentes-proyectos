@@ -1,0 +1,350 @@
+/* ==========================================================================
+   Chromatix — Estilos Minimalistas Tests de Adultos
+   ========================================================================== */
+
+.containerTest {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+#gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   Test Adultos 1: Ishihara
+   ========================================================================== */
+
+#imageContainer {
+    width: 100%;
+    max-width: 330px;
+    background: #FFFFFF;
+    padding: 0.75rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-card);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+#imageContainer img,
+#randomImage {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+/* Casillas de Dígitos Ingresados */
+#userNumbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0.5rem 0 1.25rem;
+}
+
+#userNumbers div,
+.digit-slot {
+    width: 58px;
+    height: 68px;
+    background: #FFFFFF;
+    border: 2px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--primary-clinical);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s ease;
+}
+
+#userNumbers div:not(:empty) {
+    border-color: var(--primary-clinical);
+    background-color: var(--primary-light);
+}
+
+/* Barra de Acciones Siguiente / Borrar */
+.container-Verificar-Borrar {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    width: 100%;
+    max-width: 360px;
+}
+
+#checkButton {
+    flex: 2;
+    background-color: var(--primary-clinical);
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--radius-md);
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+#checkButton:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+#clearButton {
+    flex: 1;
+    background-color: #FFFFFF;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-subtle);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#clearButton:hover {
+    background-color: var(--bg-d65);
+    color: var(--text-main);
+    border-color: var(--border-focus);
+}
+
+/* Teclado Numérico Táctil 0-9 */
+#keyboard {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 360px;
+    margin-bottom: 1rem;
+}
+
+#keyboard button.keyboardKey {
+    width: 100%;
+    height: 52px;
+    background: #FFFFFF;
+    color: var(--text-main);
+    font-family: var(--font-mono);
+    font-size: 1.25rem;
+    font-weight: 600;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.15s ease;
+}
+
+#keyboard button.keyboardKey:hover {
+    background-color: var(--primary-light);
+    color: var(--primary-clinical);
+    border-color: var(--primary-clinical);
+    transform: translateY(-1px);
+}
+
+#keyboard button.keyboardKey:active {
+    transform: scale(0.96);
+}
+
+#noSeeButton {
+    background: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--border-subtle);
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 0.55rem 1.5rem;
+    border-radius: var(--radius-pill);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#noSeeButton:hover {
+    background: #F1F5F9;
+    color: var(--text-main);
+    border-color: var(--border-focus);
+}
+
+/* ==========================================================================
+   Test Adultos 2: Farnsworth D-15 (Stitch Mockup 4)
+   ========================================================================== */
+
+.d15-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.enjoy-css {
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.d15-section-title {
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+}
+
+.containerColors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    padding: 0.5rem;
+    background: var(--bg-d65);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-subtle);
+}
+
+.elem1 {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.elem1:hover {
+    transform: scale(1.12);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+/* Pastilla fija Cap 0 (Piloto) */
+#elem1,
+#elem17 {
+    box-shadow: 0 0 0 2px var(--primary-clinical);
+    cursor: not-allowed;
+}
+
+#elem1::after,
+#elem17::after {
+    content: '★';
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Slots vacíos de la bandeja de ordenamiento */
+.containerColors:last-child .elem1[style*="background: white"],
+.containerColors:last-child .elem1[style*="background: rgb(255, 255, 255)"] {
+    border: 2px dashed var(--border-focus);
+    box-shadow: none;
+}
+
+.d15-actions-bar {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.btnVerResultados {
+    background-color: var(--primary-clinical);
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: var(--radius-md);
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.btnVerResultados:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+.btn-reset-d15 {
+    background: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--border-subtle);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-reset-d15:hover {
+    background-color: var(--bg-d65);
+    color: var(--text-main);
+    border-color: var(--border-focus);
+}
+
+/* Canvas del Diagrama Polar D-15 */
+.canvas-container {
+    background: #FFFFFF;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+    width: 100%;
+    max-width: 670px;
+}
+
+#myCanvas {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    background: #FFFFFF;
+}
+
+.d15-evaluation-guide {
+    margin-top: 1.5rem;
+    width: 100%;
+    max-width: 670px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-subtle);
+    overflow: hidden;
+}
+
+.d15-evaluation-guide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
