@@ -24,3 +24,4 @@ proyecto-antiguo/
 *.sln
 *.sw?
 *.md
+!README.md
